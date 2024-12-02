@@ -9,7 +9,7 @@ except:
    contects={}
 
 while True:
-    userchoice=int(input("\nwelcome guys\nchoose what you want to do\n1.Add contect\n2.View contect\n3.Remove contect\n4.exit\nyour choice is:"))
+    userchoice=int(input("\nwelcome guys\nchoose what you want to do\n1.Add contect\n2.View contect\n3.Remove contect\n4.List all contect\n5.exit\nyour choice is:"))
 
     if userchoice==1:
         while True:
@@ -44,21 +44,13 @@ while True:
             except:
                 logging.info("no user found to delete")
                 break
-    if userchoice==4:
+    if userchoice==4:  
+        if contects:
+            for name, details in contects.items():
+                logging.info(f"{name}: {details}")
+        else:
+            logging.info("No contacts available.")  
+            
+    if userchoice==5:
      while True:
            break
- 
-            
-            
-                 
-
-
-
-
-
-              
-
-
-
-
-
